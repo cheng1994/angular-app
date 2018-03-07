@@ -33,6 +33,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
+      - run: echo "hello world"
       - run: ./node_modules/.bin/ng build --prod
-      - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+      # Now we deploy it to Firebase
+      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
