@@ -36,4 +36,4 @@ jobs:
       - run: echo "hello world"
       - run: ./node_modules/.bin/ng build --prod
       # Now we deploy it to Firebase
-      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+      - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN_ANGULAR_APP"
