@@ -34,6 +34,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: ./node_modules/.bin/ng build --providers
+      - run: ./node_modules/.bin/ng build --prod
 
       - run: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
